@@ -911,16 +911,19 @@ img {
 }
 
 .soc-info {
-  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
   margin-right: 93px;
+  gap: 20px;
 }
 
 .footer-list {
   display: flex;
+  align-items: baseline;
 }
 
 .footer-address {
-  padding-right: 70px;
+  margin-right: 70px;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition: 0.25s;
   transition-duration: 0.25s;
@@ -929,7 +932,6 @@ img {
   font-weight: 700;
   font-size: 14px;
   color: #ffffff;
-  padding-bottom: 20px;
   text-align: start;
 }
 
@@ -980,12 +982,13 @@ img {
   background: #2196f3;
   outline: none;
 }
+.footer_subscribe_box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 
 .footer-text {
-  width: 219px;
-  height: 16px;
-  margin-top: 9px;
-  margin-bottom: 20px;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
@@ -1000,7 +1003,6 @@ img {
 }
 
 .input__text {
-  margin-top: 9px;
   box-sizing: border-box;
   background-color: #2f303a;
   width: 350px;
@@ -1008,7 +1010,6 @@ img {
   font-size: 1em;
   line-height: 1.5;
   padding: 15px 0px 15px 16px;
-  margin-bottom: 0;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
@@ -1024,37 +1025,31 @@ img {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
 
+.footer-btn-box {
+  display: flex;
+  background-color: var(--blue);
+  height: 50px;
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
+  cursor: pointer;
+  align-items: center;
+  border-radius: 4px;
+  margin-left: 12px;
+  width: 200px;
+  justify-content: center;
+  gap: 10px;
+}
+
 .footer-btn {
   color: rgba(255, 255, 255, 1);
-  width: 200px;
-  height: 50px;
   font-weight: 700;
   font-size: 16px;
   line-height: 30px;
   background-color: var(--blue);
-  border-radius: 4px;
-  margin-left: 12px;
-  padding-top: 10px;
-  padding-left: 29px;
-  padding-bottom: 10px;
-  padding-right: 62px;
   border: none;
-  box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
-  cursor: pointer;
-}
-
-.send {
-  position: absolute;
-  top: 67px;
-  right: 21px;
 }
 
 .footer-email {
-  position: relative;
-}
-.test2 {
   display: flex;
-  justify-content: center;
 }
 
 /*Модальное окно*/
@@ -1079,14 +1074,12 @@ img {
 }
 
 .modal {
-  /* box-sizing: content-box; */
   position: absolute;
-  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 528px;
-  min-height: 581px;
+  height: 581px;
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1142,8 +1135,7 @@ img {
 }
 
 .list-form {
-  margin-top: 12px;
-  margin-bottom: 4px;
+  margin-bottom: 10px;
 }
 
 .form-field {
@@ -1155,6 +1147,8 @@ img {
 
 .form-fild {
   position: relative;
+  margin-top: 12px;
+  margin-bottom: 4px;
 }
 .form-field-icon {
   position: absolute;
@@ -1199,10 +1193,10 @@ textarea:focus {
   border: 2px solid var(--blue);
 }
 
-input[type="checkbox"] {
+/* input[type="checkbox"] {
   width: 15px;
   height: 15px;
-}
+} */
 
 .form-field {
   width: 100%;
@@ -1216,9 +1210,9 @@ input[type="checkbox"] {
   padding-left: 50px;
 }
 
-input[type="text"] {
+/* input[type="text"] {
   padding-left: 50px;
-}
+} */
 
 .form-field:hover {
   border: 1px solid #2196f3;
@@ -1262,4 +1256,65 @@ input[type="text"] {
 .agreement-link {
   font-family: "Roboto";
   color: var(--blue);
+}
+.footer-subscribe {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.footer-subscribe-part1 {
+  height: 16px;
+  visibility: hidden;
+}
+
+.modal__button-close {
+  display: inline-flex;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  top: 8px;
+  right: 8px;
+  fill: currentColor;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: #fff;
+}
+.modal-icon-close {
+  padding-left: 3px;
+  padding-top: 3px;
+}
+.modal__button-close:hover,
+.modal__button-close:focus {
+  color: var(--blue);
+  border-color: var(--blue);
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+.check-svg {
+  border: 2px solid var(--black);
+  border-radius: 2px;
+  margin-right: 8.38px;
+}
+.check-icon {
+  display: none;
+}
+.check-input:checked + .check-svg {
+  border: none;
+}
+.check-input:checked + .check-svg > .check-icon {
+  display: block;
 }
