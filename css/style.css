@@ -911,10 +911,7 @@ img {
 }
 
 .soc-info {
-  display: flex;
-  flex-direction: column;
   margin-right: 93px;
-  gap: 20px;
 }
 
 .footer-list {
@@ -933,6 +930,7 @@ img {
   font-size: 14px;
   color: #ffffff;
   text-align: start;
+  margin-bottom: 20px;
 }
 
 .footer-soc-link {
@@ -1025,7 +1023,7 @@ img {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
 
-.footer-btn-box {
+/* .footer-btn-box {
   display: flex;
   background-color: var(--blue);
   height: 50px;
@@ -1037,15 +1035,22 @@ img {
   width: 200px;
   justify-content: center;
   gap: 10px;
+} */
+.send {
+  margin-left: 10px;
 }
-
 .footer-btn {
   color: rgba(255, 255, 255, 1);
   font-weight: 700;
   font-size: 16px;
   line-height: 30px;
   background-color: var(--blue);
+  height: 50px;
   border: none;
+  margin-left: 12px;
+  border-radius: 4px;
+  padding-left: 29px;
+  padding-right: 29px;
 }
 
 .footer-email {
@@ -1315,6 +1320,6 @@ textarea:focus {
 .check-input:checked + .check-svg {
   border: none;
 }
-.check-input:checked + .check-svg > .check-icon {
+.check-input:checked + .check-svg .check-icon {
   display: block;
 }
