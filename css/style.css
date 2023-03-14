@@ -47,6 +47,7 @@ header {
 .nav-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 /* block logo */
@@ -998,6 +999,7 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition: 0.25s;
   transition-duration: 0.25s;
+  margin-bottom: 20px;
 }
 
 .input__text {
@@ -1055,6 +1057,7 @@ img {
 
 .footer-email {
   display: flex;
+  align-items: end;
 }
 
 /*Модальное окно*/
@@ -1267,10 +1270,6 @@ textarea:focus {
   flex-direction: column;
   gap: 20px;
 }
-.footer-subscribe-part1 {
-  height: 16px;
-  visibility: hidden;
-}
 
 .modal__button-close {
   display: inline-flex;
@@ -1285,6 +1284,7 @@ textarea:focus {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   background-color: #fff;
+  cursor: pointer;
 }
 .modal-icon-close {
   padding-left: 3px;
